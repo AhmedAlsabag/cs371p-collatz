@@ -2518,10 +2518,10 @@ call    3 never executed
         -: 2501:   */
         -: 2502:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 2503:    inline bool
-function _ZSteqIcSt11char_traitsIcESaIcEEbPKT_RKSbIS3_T0_T1_E called 2 returned 100% blocks executed 100%
-        2: 2504:    operator==(const _CharT* __lhs,
+function _ZSteqIcSt11char_traitsIcESaIcEEbPKT_RKSbIS3_T0_T1_E called 8 returned 100% blocks executed 100%
+        8: 2504:    operator==(const _CharT* __lhs,
         -: 2505:	       const basic_string<_CharT, _Traits, _Alloc>& __rhs)
-        2: 2506:    { return __rhs.compare(__lhs) == 0; }
+        8: 2506:    { return __rhs.compare(__lhs) == 0; }
 call    0 returned 100%
         -: 2507:
         -: 2508:  /**

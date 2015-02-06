@@ -35,7 +35,7 @@ pair<int, int> collatz_read (const string& s) {
 
 int collatz_eval (int i, int j) {
     // <your code>
-/*	int previous=0;	
+	int previous=0;	
 	int current=0;
 	if (i>j){
 	int temp=i;
@@ -50,11 +50,11 @@ int collatz_eval (int i, int j) {
 	for (int q=i; q<j; q++){
 		int a= q;
 		while (a!=1){
-			if(cache[a]!=0){
-			current+=cache[a];
-			cout << "Hello";
-			break;
-			}
+//			if(cache[a]!=0){
+//			current+=cache[a];
+//			cout << "Hello";
+//			break;
+//			}
 			if (a%2==0){
 			a=a/2;
 			}else {
@@ -63,9 +63,9 @@ int collatz_eval (int i, int j) {
 		current++;
 		}
 	
-	if (cache[q]==0){
-	cache[q]=current;
-	}
+//	if (cache[q]==0){
+//	cache[q]=current;
+//	}
 	if (current>previous){
 	previous=current;
 	}
@@ -73,8 +73,8 @@ int collatz_eval (int i, int j) {
 
 	}
     return previous+1;}
-*/
-return 1;}
+
+//return 1;}
 // -------------
 // collatz_print
 // -------------

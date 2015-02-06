@@ -4,7 +4,7 @@
 #include <string>   // getline, string
 #include <utility>  // make_pair, pair
 using namespace std;
-int cache [1000000];
+//int cache [1000000];
 // ------------
 // collatz_read
 // ------------
@@ -37,30 +37,29 @@ int collatz_eval (int i, int j) {
         for (int q=i; q<j; q++){
                 int a= q;
                 while (a!=1){
-			if (a<1000000){
-                       	 if(cache[a]!=0){
-                      	  current+=cache[a];
-                       		 break;
-                       		 }
-			}
-		        if (a%2==0){
+//                      if(cache[a]!=0){
+//                      current+=cache[a];
+//                      cout << "Hello";
+//                      break;
+//                      }
+                        if (a%2==0){
                         a=a/2;
                         }else {
                         a=(3*a)+1;
                         }
                 current++;
                 }
-             if (cache[q]==0){
-        cache[q]=current;
-        }
-	   if (current>previous){
+
+//      if (cache[q]==0){
+//      cache[q]=current;
+//      }
+        if (current>previous){
         previous=current;
         }
         current=0;
 
         }
     return previous+1;}
-
 
 // -------------
 // collatz_print
