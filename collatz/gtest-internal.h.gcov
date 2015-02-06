@@ -229,9 +229,9 @@
         -:  224:  return operand1_printer(str);\
         -:  225:}
         -:  226:
-function _ZN7testing8internal33FormatForComparisonFailureMessageEPKcRKSs called 1 returned 100% blocks executed 100%
-        1:  227:GTEST_FORMAT_IMPL_(::std::string, String::ShowCStringQuoted)
-call    0 returned 100%
+function _ZN7testing8internal33FormatForComparisonFailureMessageEPKcRKSs called 0 returned 0% blocks executed 0%
+    #####:  227:GTEST_FORMAT_IMPL_(::std::string, String::ShowCStringQuoted)
+call    0 never executed
         -:  228:#if GTEST_HAS_STD_WSTRING
         -:  229:GTEST_FORMAT_IMPL_(::std::wstring, String::ShowWideCStringQuoted)
         -:  230:#endif  // GTEST_HAS_STD_WSTRING

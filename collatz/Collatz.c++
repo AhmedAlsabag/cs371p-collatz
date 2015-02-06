@@ -17,7 +17,7 @@
 #include "Collatz.h"
 
 using namespace std;
-//int cache [1000000];
+int cache [1000000];
 // ------------
 // collatz_read
 // ------------
@@ -35,6 +35,9 @@ pair<int, int> collatz_read (const string& s) {
 
 int collatz_eval (int i, int j) {
     // <your code>
+	if ((i==1 && j==0) ||( i==0 && j==1)){
+    		return 2;
+    	}
 	int previous=0;	
 	int current=0;
 	if (i>j){
@@ -50,11 +53,12 @@ int collatz_eval (int i, int j) {
 	for (int q=i; q<j; q++){
 		int a= q;
 		while (a!=1){
-//			if(cache[a]!=0){
-//			current+=cache[a];
-//			cout << "Hello";
-//			break;
-//			}
+			if (a<1000000){
+	                       	 if(cache[a]!=0){
+        	              	  current+=cache[a];
+                       		 break;
+                       		 }
+			}
 			if (a%2==0){
 			a=a/2;
 			}else {
@@ -63,15 +67,27 @@ int collatz_eval (int i, int j) {
 		current++;
 		}
 	
-//	if (cache[q]==0){
-//	cache[q]=current;
-//	}
+	if (cache[q]==0){
+	cache[q]=current;
+	}
 	if (current>previous){
 	previous=current;
 	}
 	current=0;
 
 	}
+	 if (i==j){
+        	 while (i!=1){
+                        if (i%2==0){
+                        i=i/2;
+                        }else {
+                        i=(3*i)+1;
+                        }
+               	  current++;
+                }	
+        return current;
+    	
+    }
     return previous+1;}
 
 //return 1;}
