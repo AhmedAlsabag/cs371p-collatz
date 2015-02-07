@@ -1,0 +1,35 @@
+commit aeefb2a417ee1901b8370ed24b3961392dd1f4f1
+Author: Ahmed Alsabag <alsabag@cs.utexas.edu>
+Date:   Thu Feb 5 20:09:15 2015 -0600
+
+    sphere accepts in 0.0s
+
+commit 98643e30ecaaa1c85e9ec6983a5410fec0d32eb6
+Author: Ahmed Alsabag <alsabag@cs.utexas.edu>
+Date:   Thu Feb 5 20:07:49 2015 -0600
+
+    implemented accepted tests and cache
+
+commit fa5c8509d98d84b12282f9ac7068d044aac979f5
+Author: Ahmed Alsabag <alsabag@cs.utexas.edu>
+Date:   Thu Feb 5 19:13:06 2015 -0600
+
+    Sphere accepts without a cache, but failing solveB test
+
+commit 98edc0d3a405cdc413fec666353bc2118ebd3223
+Author: Ahmed Alsabag <alsabag@cs.utexas.edu>
+Date:   Thu Feb 5 19:02:29 2015 -0600
+
+    at least 3 tests for each function created
+
+commit e2d207c3002fab4c45b795258c8b26bf13f31f7b
+Author: Ahmed Alsabag <alsabag@cs.utexas.edu>
+Date:   Thu Feb 5 11:44:07 2015 -0600
+
+    Fixed test cases and confirmed failures
+
+commit 8f51809170dec985836f837d847cb8e5a8104ffa
+Author: Ahmed Alsabag <alsabag@cs.utexas.edu>
+Date:   Thu Feb 5 11:39:17 2015 -0600
+
+    Code Compiles and inital tests pass
