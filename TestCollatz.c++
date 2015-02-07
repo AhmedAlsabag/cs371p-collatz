@@ -73,7 +73,7 @@ TEST(Collatz, eval_4) {
     ASSERT_EQ(174, v);}
 
 TEST(Collatz, eval_5) {
-    const int v = collatz_eval(10, 1);
+    const int v = collatz_eval(10, 1);//reversed input
     ASSERT_EQ(20, v);}
 
 TEST(Collatz, eval_6) {
@@ -81,7 +81,7 @@ TEST(Collatz, eval_6) {
     ASSERT_EQ(110, v);}
 
 TEST(Collatz, eval_7) {
-    const int v = collatz_eval(500000, 500002);
+    const int v = collatz_eval(500000, 500002);//large calculation
     ASSERT_EQ(152, v);}
 // -----
 // print
@@ -126,7 +126,7 @@ TEST(Collatz, solveB) {
     istringstream r("1 45\n45 1\n145 145\n");
     ostringstream w;
     collatz_solve(r, w);
-    ASSERT_EQ("1 45 112\n45 1 112\n145 145 117\n", w.str());}
+    ASSERT_EQ("1 45 112\n45 1 112\n145 145 117\n", w.str());}//contains same input
 
 TEST(Collatz, solveC) {
     istringstream r("1 145\n146 144\n12 1234\n");

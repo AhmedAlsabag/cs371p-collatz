@@ -22,62 +22,55 @@ pair<int, int> collatz_read (const string& s) {
 
 int collatz_eval (int i, int j) {
     // <your code>
-	if ((i==1 && j==0) ||( i==0 && j==1)){
-                return 2;
-        }
         int previous=0;
         int current=0;
-         if (i==j){
-                 while (i!=1){
-                        if (i%2==0){
-                        i=i/2;
-                        }else {
-                        i=(3*i)+1;
-                        }
-                  current++;
-                }
+        if (i==j){ //On same input, only one calculation is done
+           while (i!=1){
+              if (i%2==0){
+                i=i/2;
+              }else {
+                i=(3*i)+1;
+              }
+              current++;
+          }
         return current+1;
-
-    }    
-    if (i>j){
-        int temp=i;
-        i=j;
-        j=temp;
         }
-        int halfVal=(j/2)+1;
+        if (i>j){//On the chance that the range is reversed
+           int temp=i;
+           i=j;
+           j=temp;
+        }
+/*Given positive integers, b and e, let m = (e / 2) + 1.
+  If b < m, then max_cycle_length(b, e) = max_cycle_length(m, e).*/
+        int halfVal=(j/2)+1;//Optimization.
         if (i<halfVal){
-        i=halfVal;
-
+           i=halfVal;
         }
         for (int q=i; q<=j; q++){
-                int a= q;
-                while (a!=1){
-                        if (a<1000000){
-                                 if(cache[a]!=0){
-                                  current+=cache[a];
-                                 break;
-                                 }
-                        }
-                        if (a%2==0){
-                        a=a/2;
-                        }else {
-                        a=(3*a)+1;
-                        }
-                current++;
-                }
-
-        if (cache[q]==0){
-        cache[q]=current;
+           int a= q;
+           while (a!=1){
+              if (a<1000000){//do not cache if over 1000000
+                 if(cache[a]!=0){
+                    current+=cache[a];
+                    break;
+                 }
+              }
+              if (a%2==0){
+                 a=a/2;
+              }else {
+                 a=(3*a)+1;
+              }
+              current++;
+           }
+        if (cache[q]==0){//cache if value doesn't currently exist in cache
+           cache[q]=current;
         }
-        if (current>previous){
-        previous=current;
+        if (current>previous){//Do we have a new largest cycle length
+           previous=current;
         }
         current=0;
-
         }
-
-    }
-    return previous+1;}
+        return previous+1;}//cycle length including 1
 // -------------
 // collatz_print
 // -------------
